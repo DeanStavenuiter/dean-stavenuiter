@@ -3,6 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-geist-sans: "Compressa VF", sans-serif;
+  --font-geist-mono: "Compressa VF", sans-serif;
+  --font-weight-bold: 100;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
