@@ -4,9 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-geist-sans: "Compressa VF", sans-serif;
-  --font-geist-mono: "Compressa VF", sans-serif;
-  --font-weight-bold: 100;
+  --font-sofia-sans-condensed: "Sofia Sans Condensed", sans-serif;
+  --font-spline-sans-mono: "Spline Sans Mono", sans-serif;
 }
 
 @layer base {
@@ -273,4 +272,27 @@
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  @apply font-sofia-sans-condensed;
+}
+
+p {
+  @apply font-spline-sans-mono;
+}
+
+h1{
+  font-size: 25rem;
+  line-height: 0.75;
+  letter-spacing: -0.09em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.svg-logo {
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+  font-weight: 900;
+}
 /* background: #0c1e68; */
