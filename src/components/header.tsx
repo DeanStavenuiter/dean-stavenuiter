@@ -5,6 +5,9 @@ const Header = () => {
   return (
     <div>
         <Logo />
+        <div className='flex justify-center items-center'>
+        
+        </div>
     </div>
   )
 }
