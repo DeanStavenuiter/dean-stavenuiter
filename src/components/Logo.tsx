@@ -1,6 +1,7 @@
 "use client";
 
 import gsap from "gsap";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 const Logo = () => {
@@ -76,10 +77,11 @@ const Logo = () => {
   }, []);
 
   return (
+    <Link href="/">
     <svg 
       ref={svgRef} 
       viewBox="0 0 1280 720" 
-      className="svg-logo"
+      className="svg-logo font-spline-sans-mono"
       style={{
         width: '150px',
         height: '150px',
@@ -103,9 +105,10 @@ const Logo = () => {
           <text y="230">DEAN</text>
           <text y="460">DEAN</text>
           <text y="690">DEAN</text>
+          </g>
         </g>
-      </g>
-    </svg>
+      </svg>
+    </Link>
   );
 };
 
