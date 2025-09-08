@@ -24,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl-NL">
+    <html lang="nl-NL" className="">
       <body
-        className={`${sofiaSansCondensed.variable} ${splineSansMono.variable} antialiased background-dots `}
+        className={`${sofiaSansCondensed.variable} ${splineSansMono.variable} antialiased background-dots`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="">{children}</main>

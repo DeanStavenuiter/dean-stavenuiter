@@ -4,11 +4,10 @@ import Navigation from "./Navigation";
 
 const Header = () => {
   return (
-    <div>
+    <div className="min-w-screen">
       <Logo />
       <div className="flex justify-center items-center pt-20">
         <Navigation /> 
-        
       </div>
     </div>
   );
