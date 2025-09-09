@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${sofiaSansCondensed.variable} ${splineSansMono.variable} antialiased background-dots`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <main className="">{children}</main>
+          <main className="max-w-screen">{children}</main>
         </ThemeProvider>
       </body>
     </html>

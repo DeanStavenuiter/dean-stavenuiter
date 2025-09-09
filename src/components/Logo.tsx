@@ -85,7 +85,6 @@ const Logo = () => {
       style={{
         width: '150px',
         height: '150px',
-        position: 'fixed',
         zIndex: 1000
       }}
     >
@@ -98,13 +97,13 @@ const Logo = () => {
       <g fontSize="300">
         <g mask="url(#maskLeft)" fill="#fff" className="left">
           <text y="230">DEAN</text>
-          <text y="460">DEAN</text>
-          <text y="690">DEAN</text>
+          <text className='hidden md:block' y="460">DEAN</text>
+          <text className='hidden md:block' y="690">DEAN</text>
         </g>
         <g mask="url(#maskRight)" fill="#aaa" className="right">
           <text y="230">DEAN</text>
-          <text y="460">DEAN</text>
-          <text y="690">DEAN</text>
+          <text className='hidden md:block' y="460">DEAN</text>
+          <text className='hidden md:block' y="690">DEAN</text>
           </g>
         </g>
       </svg>

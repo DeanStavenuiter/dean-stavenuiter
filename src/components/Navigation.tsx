@@ -3,7 +3,7 @@ import AnimatedText from "./animations/AnimatedText";
 
 const Navigation = () => {
   return (
-    <div className=" hidden md:flex justify-center items-center z-[99999] fixed gap-x-8">
+    <div className="hidden md:flex gap-x-8 text-[18px] 2xl:text-[23px]">
       <AnimatedText text="[ About ]" href="/about" />
       <AnimatedText text="[ Works ]" href="/works" />
       <AnimatedText text="[ Contact ]" href="/contact" />
