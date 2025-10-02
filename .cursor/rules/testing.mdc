@@ -1,0 +1,25 @@
+---
+globs: *.test.ts,*.test.tsx,*.spec.ts,*.spec.tsx
+---
+
+# Testing & Quality Rules
+
+## Unit Testing
+- Write unit tests with Jest for all critical functionality
+- Cover critical business logic and API endpoints with comprehensive tests
+- Aim for meaningful test coverage, not just high percentages
+
+## End-to-End Testing
+- Use Cypress for E2E testing if the project requires it
+- Test critical user flows and business processes
+- Maintain E2E tests for core application functionality
+
+## Test Organization
+- Place tests close to the code they test
+- Use descriptive test names that explain the expected behavior
+- Group related tests logically
+
+## Quality Standards
+- Maintain high code quality through consistent testing practices
+- Write tests that are maintainable and readable
+- Ensure tests are reliable and don't produce false positives

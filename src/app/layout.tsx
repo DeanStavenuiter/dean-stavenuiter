@@ -14,7 +14,7 @@ const splineSansMono = Spline_Sans_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dean Stavenuiter",
+  title: "Dean Stavenuiter | Full Stack Developer",
   description: "Dean Stavenuiter",
 };
 
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl-NL" className="">
+    <html lang="en">
       <body
         className={`${sofiaSansCondensed.variable} ${splineSansMono.variable} antialiased background-dots`}
       >

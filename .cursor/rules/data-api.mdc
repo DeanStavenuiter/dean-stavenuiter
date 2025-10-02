@@ -1,0 +1,25 @@
+---
+globs: *.ts,*.tsx,prisma/**/*
+---
+
+# Data & API Rules
+
+## Database & ORM
+- Use Prisma as ORM with schema in `/prisma/schema.prisma`
+- Follow repository pattern for database access
+- Separate data access logic from business logic
+
+## API Validation
+- Validate API requests and responses with Zod
+- Ensure type safety for all API interactions
+- API routes must return typed JSON responses
+
+## Data Patterns
+- Use consistent error handling across API routes
+- Implement proper data validation at API boundaries
+- Follow RESTful conventions for API design
+
+## Type Safety
+- Define clear interfaces for API responses
+- Use TypeScript types for database models
+- Ensure end-to-end type safety from database to frontend

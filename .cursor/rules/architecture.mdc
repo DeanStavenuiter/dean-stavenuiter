@@ -1,0 +1,26 @@
+---
+alwaysApply: true
+---
+
+# Architecture Rules
+
+## File Organization
+- Place reusable utilities in [src/lib/](mdc:src/lib/)
+- Place server actions in `app/actions/`
+- Place shared types in `types/`
+- Maintain clear separation of concerns
+
+## Environment Variables
+- Use environment variables only via Next.js `process.env`
+- Type environment variables in `env.d.ts`
+- Never commit sensitive environment variables
+
+## Project Structure
+- Follow Next.js App Router conventions
+- Keep related files grouped logically
+- Use consistent naming patterns across the project
+
+## Code Organization
+- Separate business logic from UI components
+- Create clear boundaries between different layers
+- Use dependency injection patterns where appropriate

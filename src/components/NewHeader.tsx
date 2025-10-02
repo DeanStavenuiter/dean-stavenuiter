@@ -1,19 +1,22 @@
 import React from "react";
-import Logo from "./Logo";
+import Logo from "./animations/AnimatedLogo";
 import Navigation from "./Navigation";
 import AnimatedContact from "./animations/AnimatedContact";
-import AnimatedMobileMenu from "./animations/AnimatedMobileMenu";
+import AnimatedMobileMenu, { MobileMenuProvider, MobileMenuPopup } from "./animations/AnimatedMobileMenu";
 
 const Header = () => {
   return (
-    <div className="max-w-screen flex items-center justify-between">
-      <Logo />
-      <Navigation />
-      <div className="flex justify-center items-center lg:pr-12">
-        <AnimatedContact />
-        <AnimatedMobileMenu />
+    <MobileMenuProvider>
+      <div className="max-w-screen mix-blend-difference z-10 fixed w-full flex items-start justify-between pt-4 pr-4">
+        <Logo />
+        <Navigation />
+        <div>
+          <AnimatedContact />
+          <AnimatedMobileMenu />
+        </div>
       </div>
-    </div>
+      <MobileMenuPopup />
+    </MobileMenuProvider>
   );
 };
 

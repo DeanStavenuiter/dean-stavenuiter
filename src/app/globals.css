@@ -85,10 +85,10 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Dark mode dots */
-    --dot-bg: #1a1a1a;
+    /* --dot-bg: #1a1a1a;
     --dot-color: #070606;
     --dot-size: 1px;
-    --dot-space: 3px;
+    --dot-space: 3px; */
   }
 }
 
@@ -132,28 +132,25 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-.background-dots {
-  --color1: #f6939340;
-  --color2: #0c1e68;
-  --color3: #0c1e68;
-  --color4: #ff6b6b40;
-  --pos1: 20% 30%;
-  --pos2: 80% 20%;
-  --pos3: 40% 80%;
-  --pos4: 70% 60%;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html,
+  body {
+    width: 100%;
+    max-width: none;
+  }
 
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.background-dots {
   min-height: 100vh;
   width: 100%;
-
-  background: radial-gradient(
-      circle at var(--pos1),
-      var(--color1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(circle at var(--pos2), var(--color2) 0px, transparent 50%),
-    radial-gradient(circle at var(--pos3), var(--color3) 0px, transparent 50%),
-    radial-gradient(circle at var(--pos4), var(--color4) 0px, transparent 50%),
-    linear-gradient(
+  background: linear-gradient(
         90deg,
         var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
         transparent 1%
@@ -165,96 +162,6 @@
       )
       center / var(--dot-space) var(--dot-space),
     var(--dot-color);
-
-  animation: gradientAnimation1 120s ease-in-out infinite,
-    gradientAnimation2 150s ease-in-out infinite,
-    gradientAnimation3 180s ease-in-out infinite,
-    gradientAnimation4 140s ease-in-out infinite;
-}
-
-@keyframes gradientAnimation1 {
-  0%,
-  100% {
-    --pos1: 20% 30%;
-  }
-  20% {
-    --pos1: 22% 31%;
-  }
-  40% {
-    --pos1: 25% 33%;
-  }
-  60% {
-    --pos1: 23% 32%;
-  }
-  80% {
-    --pos1: 21% 30%;
-  }
-}
-
-@keyframes gradientAnimation2 {
-  0%,
-  100% {
-    --pos2: 80% 20%;
-  }
-  15% {
-    --pos2: 78% 21%;
-  }
-  30% {
-    --pos2: 76% 23%;
-  }
-  45% {
-    --pos2: 78% 22%;
-  }
-  60% {
-    --pos2: 79% 21%;
-  }
-  75% {
-    --pos2: 80% 20%;
-  }
-}
-
-@keyframes gradientAnimation3 {
-  0%,
-  100% {
-    --pos3: 40% 80%;
-  }
-  25% {
-    --pos3: 42% 78%;
-  }
-  50% {
-    --pos3: 44% 76%;
-  }
-  75% {
-    --pos3: 42% 78%;
-  }
-}
-
-@keyframes gradientAnimation4 {
-  0%,
-  100% {
-    --pos4: 70% 60%;
-  }
-  30% {
-    --pos4: 68% 58%;
-  }
-  60% {
-    --pos4: 66% 56%;
-  }
-  90% {
-    --pos4: 68% 58%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  html,
-  body {
-    width: 100%;
-    max-width: none;
-    overflow-x: auto;
-  }
 }
 
 h1,
@@ -271,79 +178,76 @@ p {
 }
 
 .h1-hero {
-  font-size: clamp(4rem, 95vw + 1rem, 25rem);
+  font-size: clamp(4rem, 100vw + 1rem, 35rem);
   line-height: 0.8;
   letter-spacing: -0.08em;
   text-transform: uppercase;
   text-align: center;
   overflow: visible;
+  z-index: 1;
+  color: black;
 
   @media (max-width: 1920px) {
-    font-size: clamp(4rem, 95vw + 1rem, 25rem);
+    font-size: clamp(4rem, 100vw + 1rem, 26rem);
   }
 
   @media (max-width: 1500px) {
-    font-size: clamp(3.5rem, 95vw + 1rem, 20rem);
+    font-size: clamp(3.5rem, 100vw + 1rem, 20rem);
   }
 
   @media (max-width: 1200px) {
-    font-size: clamp(3.5rem, 95vw, 15rem);
+    font-size: clamp(3.5rem, 100vw, 15rem);
   }
 
   @media (max-width: 1024px) {
-    font-size: clamp(3rem, 95vw, 14rem);
+    font-size: clamp(3rem, 100vw, 14rem);
   }
 
   @media (max-width: 900px) {
-    font-size: clamp(2.5rem, 95vw, 13rem);
+    font-size: clamp(2.5rem, 100vw, 13rem);
   }
 
   @media (max-width: 800px) {
-    font-size: clamp(2.5rem, 95vw, 10rem);
+    font-size: clamp(2.5rem, 100vw, 10rem);
   }
 
   @media (max-width: 600px) {
-    font-size: clamp(2rem, 95vw, 8rem);
+    font-size: clamp(2rem, 100vw, 8rem);
   }
 
   @media (max-width: 500px) {
-    font-size: clamp(2rem, 95vw, 7rem);
+    font-size: clamp(2rem, 100vw, 7rem);
   }
 
   @media (max-width: 480px) {
-    font-size: clamp(2rem, 95vw, 5rem);
-    line-height: 0.9;
-    letter-spacing: -0.02em;
+    font-size: clamp(2rem, 100vw, 5rem);
   }
 
   @media (max-width: 350px) {
-    font-size: clamp(1.5rem, 95vw, 4.5rem);
+    font-size: clamp(1.5rem, 100vw, 4.5rem);
   }
 }
 
 .text-clip-bg {
-  background-image: url("/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  background-attachment: scroll;
+  visibility: hidden;
 }
 
-.underline-contact{
+.text-clip-bg.gsap-initialized {
+  visibility: visible;
+}
+
+.underline-contact {
   display: block;
   position: absolute;
   width: 0;
   bottom: -2px;
   left: 0;
   height: 2px;
-  background-color:white;
+  background-color: white;
   z-index: 1;
 }
 
-.contact{
+.contact {
   @media (max-width: 1024px) {
     display: none;
   }

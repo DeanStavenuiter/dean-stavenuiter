@@ -1,0 +1,23 @@
+---
+globs: *.tsx,*.ts,*.jsx,*.js,*.css
+---
+
+# Styling Rules (Tailwind CSS)
+
+## Tailwind Usage
+- Use Tailwind utility classes instead of custom CSS whenever possible
+- Avoid writing custom CSS unless absolutely necessary
+
+## Class Organization
+- Order Tailwind classes logically: layout → spacing → typography → colors → effects
+- Example: `flex items-center px-4 py-2 text-lg font-semibold text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600`
+
+## Code Reuse
+- Extract repeated class sets with `@apply` in [src/app/globals.css](mdc:src/app/globals.css)
+- Use Tailwind variants for component variations
+- Create reusable utility classes for common patterns
+
+## Best Practices
+- Keep utility classes readable and maintainable
+- Use semantic class names when creating custom utilities
+- Leverage Tailwind's responsive and state modifiers effectively

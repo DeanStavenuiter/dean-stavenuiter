@@ -1,0 +1,23 @@
+---
+alwaysApply: true
+---
+
+# Code Style Rules
+
+## TypeScript Usage
+- Use TypeScript for all files instead of JavaScript
+- Add explicit return types for all exported functions
+- Ensure type safety throughout the codebase
+
+## Variable Declarations
+- Prefer `const` over `let` and avoid `var` entirely
+- Use descriptive variable names that clearly indicate purpose
+
+## ESLint and Prettier
+- Follow ESLint and Prettier formatting rules consistently
+- Ensure code is properly formatted before committing
+
+## React Components
+- Always use functional React components with hooks
+- No class components should be used
+- Keep components focused on a single responsibility

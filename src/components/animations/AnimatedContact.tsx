@@ -1,8 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import gsap from "gsap";
 
 const AnimatedContact = () => {
+  const contactRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -13,12 +15,36 @@ const AnimatedContact = () => {
     setIsHovered(false);
   };
 
+  const init = useCallback(() => {
+    if (!contactRef.current) return;
+
+    gsap.fromTo(
+      contactRef.current,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        delay: 1.5,
+        duration: 1.2,
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    init();
+  }, [init]);
+
   return (
-    <Link href="/contact" className="uppercase font-spline-sans-mono flex items-center group">
+    <Link
+      href="/contact"
+      className="uppercase font-spline-sans-mono flex items-center group text-[2rem]/6"
+    >
       <div
         className="flex items-center relative contact cursor-pointer"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        ref={contactRef}
       >
         <span className="hidden md:block group-hover:font-bold text-[18px] 2xl:text-[23px] relative">
           contact me{" "}
@@ -35,10 +61,10 @@ const AnimatedContact = () => {
           height="24px"
           viewBox="0 -960 960 960"
           width="24px"
-          fill="#FFFFFF"
-          className="hidden md:block transform rotate-[325deg] transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 group-hover:font-bold"
+          fill="currentColor"
+          className="hidden md:block transform transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 group-hover:font-bold"
         >
-          <path d="m547.69-267.69-28.31-28.77L682.92-460H200v-40h482.92L519.38-663.54l28.31-28.77L760-480 547.69-267.69Z" />
+          <path d="M247.54-268.46 220-296l403.23-404H251.54v-40h440v440h-40v-371.69l-404 403.23Z" />
         </svg>
       </div>
     </Link>

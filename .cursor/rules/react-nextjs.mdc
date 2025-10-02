@@ -1,0 +1,24 @@
+---
+globs: *.tsx,*.ts,*.jsx,*.js
+---
+
+# React & Next.js Rules
+
+## Next.js App Router
+- Use Next.js App Router (`app/` directory) instead of Pages Router
+- Place pages in the `app/` directory following the new routing conventions
+
+## Component Types
+- Default to Server Components for better performance
+- Only use Client Components when needed (add `'use client'` directive)
+- Use async/await with fetch inside Server Components for data fetching
+
+## Component Organization
+- Organize components in the `components/` folder with clear, descriptive names
+- Keep components small, composable, and reusable
+- Follow single responsibility principle for each component
+
+## File Structure
+- Place components in [src/components/](mdc:src/components/)
+- Use descriptive names that clearly indicate component purpose
+- Group related components in subdirectories when appropriate

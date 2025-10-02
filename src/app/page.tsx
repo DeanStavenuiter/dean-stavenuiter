@@ -1,11 +1,15 @@
-import Hero from "../components/Hero";
-import Header from "@/components/NewHeader"
+import Hero from "../components/animations/AnimatedHeroText";
+import Header from "@/components/NewHeader";
+import AboutMe from "@/components/AboutMe";
+import TechStackCarousel from "@/components/TechStackCarousel";
 
 export default function Home() {
   return (
-    <div className="h-[5000px]">
+    <div className="relative">
       <Header />
       <Hero />
+      <AboutMe />
+      <TechStackCarousel />
     </div>
   );
 }
