@@ -89,7 +89,7 @@ const AboutMe = () => {
 
         <p className="text-lg leading-relaxed text-gray-700">
           Outside of coding I enjoy training Brazilian Jiu-Jitsu and
-          powerlifting, which help me stay sharp and focused for new challenges.
+          going to the gym, which help me stay sharp and focused for new challenges.
         </p>
       </div>
     </div>

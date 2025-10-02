@@ -163,9 +163,9 @@ const techStack: TechIcon[] = [
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
         <path
           fill="#2D3748"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M9.774 68.638a4.98 4.98 0 0 1-.04-5.268L47.126 2.376c2.08-3.392 7.102-3.096 8.768.518l34.159 74.1a4.98 4.98 0 0 1-3.092 6.853L33.824 99.79a4.98 4.98 0 0 1-5.637-2.104zM51.44 20.21c.36-1.794 2.819-2.053 3.545-.373L78.548 74.36a1.868 1.868 0 0 1-1.18 2.53L40.653 87.85a1.867 1.867 0 0 1-2.365-2.157z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
       </svg>
     ),
@@ -198,6 +198,19 @@ const techStack: TechIcon[] = [
       </svg>
     ),
   },
+  {
+    name: "OutSystems",
+    svg: (
+      <svg viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M12.8126 21.1446C13.0013 22.9704 13.8601 24.6614 15.2231 25.8909C16.586 27.1203 18.3564 27.8008 20.1919 27.8008C22.0275 27.8008 23.7978 27.1203 25.1608 25.8909C26.5238 24.6614 27.3826 22.9704 27.5713 21.1446C27.5961 20.895 27.6086 20.6421 27.6086 20.386C27.617 19.4066 27.4314 18.4354 27.0624 17.5283C26.6934 16.621 26.1484 15.7959 25.4589 15.1005C24.7694 14.405 23.9489 13.853 23.0449 13.4763C22.1409 13.0996 21.1713 12.9056 20.1919 12.9056C19.2126 12.9056 18.243 13.0996 17.339 13.4763C16.435 13.853 15.6145 14.405 14.925 15.1005C14.2355 15.7959 13.6905 16.621 13.3215 17.5283C12.9525 18.4354 12.7669 19.4066 12.7753 20.386C12.7753 20.6411 12.7878 20.8948 12.8126 21.1446ZM0.192749 20.2656C0.192642 16.31 1.36556 12.4431 3.56318 9.15402C5.76078 5.86495 8.88438 3.30141 12.539 1.78761C16.1935 0.273803 20.2149 -0.122278 24.0946 0.649453C27.9743 1.42118 31.538 3.32606 34.3351 6.1232C37.1321 8.92034 39.0369 12.4841 39.8085 16.3638C40.5801 20.2435 40.184 24.2649 38.6701 27.9194C37.1561 31.574 34.5925 34.6975 31.3034 36.895C28.0143 39.0925 24.1474 40.2654 20.1916 40.2651C17.5654 40.2651 14.9648 39.7479 12.5383 38.7428C10.1119 37.7376 7.90719 36.2645 6.0501 34.4074C4.19303 32.5503 2.71993 30.3455 1.71492 27.9191C0.709913 25.4926 0.192678 22.892 0.192749 20.2656Z"
+          fill="#FF2400"
+        />
+      </svg>
+    ),
+  },
 ];
 
 const TechStackCarousel: React.FC = () => {
@@ -205,18 +218,17 @@ const TechStackCarousel: React.FC = () => {
   const duplicatedTechStack = [...techStack, ...techStack];
 
   return (
-    <div className="py-20 px-6 md:px-2 overflow-hidden">
-
+    <div className="py-10 px-6 md:px-2">
       <div className="relative">
         {/* Scrolling container */}
-        <div className="flex overflow-hidden">
+        <div className="flex">
           <div className="flex animate-scroll gap-16">
             {duplicatedTechStack.map((tech, index) => (
               <div
                 key={`${tech.name}-${index}`}
                 className="flex flex-col items-center justify-center gap-4 min-w-[120px] group"
               >
-                <div className="w-20 h-20 flex items-center justify-center text-gray-700 transition-all duration-300 group-hover:scale-110 group-hover:text-gray-900">
+                <div className="w-16 h-16 flex items-center justify-center text-gray-700 transition-all duration-300 group-hover:scale-110 group-hover:text-gray-900">
                   {tech.svg}
                 </div>
                 <span className="text-sm font-medium text-gray-600 whitespace-nowrap">
