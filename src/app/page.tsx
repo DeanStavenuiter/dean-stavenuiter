@@ -2,6 +2,7 @@ import Hero from "../components/animations/AnimatedHeroText";
 import Header from "@/components/NewHeader";
 import AboutMe from "@/components/AboutMe";
 import TechStackCarousel from "@/components/TechStackCarousel";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <TechStackCarousel />
+      <Experience />
     </div>
   );
 }
