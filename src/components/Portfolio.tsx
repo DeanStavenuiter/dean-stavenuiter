@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 export default function Portfolio() {
     return (
@@ -31,7 +30,6 @@ export default function Portfolio() {
           <div className="grid gap-10 md:grid-cols-2">
             {/* Example Project Card */}
             <div className="bg-white rounded-2xl shadow hover:shadow-lg transition p-6">
-              <Image src="/project1.png" alt="Project 1" className="rounded-xl mb-4" />
               <h3 className="text-2xl font-semibold">Project Name</h3>
               <p className="text-gray-600 mt-2">Short description of what the project does.</p>
               <div className="mt-4 flex gap-3">
