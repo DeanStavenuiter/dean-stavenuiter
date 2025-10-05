@@ -218,7 +218,7 @@ const TechStackCarousel: React.FC = () => {
   const duplicatedTechStack = [...techStack, ...techStack];
 
   return (
-    <div className="py-10 px-6 md:px-2">
+    <div className="py-10 px-6 md:px-2 overflow-x-hidden">
       <div className="relative">
         {/* Scrolling container */}
         <div className="flex">

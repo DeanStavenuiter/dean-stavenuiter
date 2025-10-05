@@ -61,10 +61,10 @@ const AboutMe = () => {
     <div className="py-20 px-6 md:px-20">
       <AnimatedTitle title="About Me" />
       <div ref={textContainerRef} className="max-w-4xl mx-auto mt-12 space-y-6 [&_.split-line]:overflow-visible">
-        <p className="text-lg leading-relaxed text-gray-700">
+        <p className="text-lg leading-relaxed text-black">
           I&apos;m a Fullstack and OutSystems Developer with a background that is a
           little different from most. Before moving into tech, I spent more than
-          12 years working as a chef in Michelin-starred kitchens. That
+          14 years working as a chef in Michelin-starred kitchens. That
           environment taught me discipline, attention to detail, and how to
           create experiences people value, which I now bring into my work as a
           developer.
