@@ -45,7 +45,7 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Light mode dots */
-    --dot-bg: #e5e7eb;
+    --dot-bg: #ffffff;
     --dot-color: #d1d5db;
     --dot-size: 1px;
     --dot-space: 3px;
@@ -85,10 +85,10 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Dark mode dots */
-    /* --dot-bg: #1a1a1a;
-    --dot-color: #070606;
+    --dot-bg: #ffffff;
+    --dot-color: #d1d5db;
     --dot-size: 1px;
-    --dot-space: 3px; */
+    --dot-space: 3px;
   }
 }
 
