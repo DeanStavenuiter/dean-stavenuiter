@@ -58,7 +58,7 @@ const AboutMe = () => {
 
 
   return (
-    <div className="py-20 px-6 md:px-20">
+    <div id="about" className="py-20 px-6 md:px-20">
       <AnimatedTitle title="About Me" />
       <div ref={textContainerRef} className="max-w-4xl mx-auto mt-12 space-y-6 [&_.split-line]:overflow-visible">
         <p className="text-lg leading-relaxed text-black">

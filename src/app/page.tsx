@@ -4,6 +4,7 @@ import AboutMe from "@/components/AboutMe";
 import TechStackCarousel from "@/components/TechStackCarousel";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <TechStackCarousel />
       <Experience />
       <Contact />
+      <Footer />
     </div>
   );
 }
