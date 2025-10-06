@@ -9,7 +9,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Experience = () => {
-
   const experienceData = [
     {
       title: "OutSystems Developer/Consultant",
@@ -1212,8 +1211,8 @@ const Experience = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-17.429084416588353 -9.362805561401416 334.8581688331767 514.3628055614014"
-          width="1682"
-          height="2500"
+          width="62"
+          height="80"
         >
           <path
             d="M82.43 182.42V505L150 437.36 217.56 505V182.42z"
@@ -1259,16 +1258,16 @@ const Experience = () => {
     const container = textContainerRef.current;
 
     // Initialize SplitText on all paragraphs
-    const paragraphs = container.querySelectorAll('p');
+    const paragraphs = container.querySelectorAll("p");
     const typeSplit = new SplitText(paragraphs, {
-      type: 'lines',
-      linesClass: 'split-line'
+      type: "lines",
+      linesClass: "split-line",
     });
 
     // Set initial state for lines
     gsap.set(typeSplit.lines, {
       opacity: 0,
-      y: 20
+      y: 20,
     });
 
     // Animate lines on scroll
@@ -1276,18 +1275,18 @@ const Experience = () => {
       opacity: 1,
       y: 0,
       duration: 1.2,
-      ease: 'power2.out',
+      ease: "power2.out",
       stagger: 0.1,
       scrollTrigger: {
         trigger: container,
-        start: 'top 75%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reverse'
-      }
+        start: "top 75%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => {
+      ScrollTrigger.getAll().forEach((trigger) => {
         if (trigger.trigger === container) {
           trigger.kill();
         }
@@ -1339,7 +1338,10 @@ const Experience = () => {
         <AnimatedTitle title="Experience" />
 
         {/* Experience */}
-        <div ref={textContainerRef} className="max-w-4xl mx-auto [&_.split-line]:overflow-visible">
+        <div
+          ref={textContainerRef}
+          className="max-w-4xl mx-auto [&_.split-line]:overflow-visible"
+        >
           {experienceData.map((exp, idx) => (
             <div key={idx} className=" p-6 ">
               <h3 className="text-2xl font-semibold text-black underline">
