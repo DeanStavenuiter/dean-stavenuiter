@@ -98,7 +98,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="py-20 px-6 md:px-20">
+    <div id="contact" className="px-6 md:px-20">
       <AnimatedTitle title="Contact" />
       <div ref={formContainerRef} className="max-w-2xl mx-auto mt-12">
         <p className="text-lg leading-relaxed text-black mb-8 text-center form-element">
@@ -204,9 +204,12 @@ const Contact = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-black cursor-pointer text-white py-4 px-6 rounded-lg font-sofia-sans-condensed text-lg font-semibold uppercase tracking-wide transition-all duration-300 hover:bg-gray-800 disabled:bg-gray-400 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+              className="group relative w-full bg-black cursor-pointer text-white py-4 px-6 rounded-lg font-sofia-sans-condensed text-lg font-semibold uppercase tracking-wide transition-all duration-300 overflow-hidden hover:shadow-xl disabled:bg-gray-400 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 disabled:hover:shadow-none"
             >
-              {isSubmitting ? "Sending..." : "Send Message"}
+              <span className="relative z-10 transition-transform duration-300 group-hover:scale-105">
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </span>
+              <span className="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left group-disabled:scale-x-0"></span>
             </button>
           </div>
 
