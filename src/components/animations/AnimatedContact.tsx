@@ -37,7 +37,7 @@ const AnimatedContact = () => {
 
   return (
     <Link
-      href="/contact"
+      href="#contact"
       className="uppercase font-spline-sans-mono flex items-center group text-[2rem]/6"
     >
       <div

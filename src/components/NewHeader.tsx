@@ -7,7 +7,7 @@ import AnimatedMobileMenu, { MobileMenuProvider, MobileMenuPopup } from "./anima
 const Header = () => {
   return (
     <MobileMenuProvider>
-      <div className="max-w-screen mix-blend-difference z-10 fixed w-full flex items-start justify-between pt-4 pr-4">
+      <div className="max-w-screen mix-blend-difference z-[60] fixed w-full flex items-start justify-between pt-4 pr-4">
         <Logo />
         <Navigation />
         <div>
