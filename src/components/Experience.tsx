@@ -1333,8 +1333,8 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className="py-20 px-6 md:px-20 overflow-y-hidden">
-      <section id="experience">
+    <div className="py-20 px-6 md:px-20 overflow-y-hidden ">
+      <section id="experience max-w-4xl">
         <AnimatedTitle title="Experience" />
 
         {/* Experience */}

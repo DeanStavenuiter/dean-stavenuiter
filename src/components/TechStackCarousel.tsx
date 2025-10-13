@@ -218,11 +218,11 @@ const TechStackCarousel: React.FC = () => {
   const duplicatedTechStack = [...techStack, ...techStack];
 
   return (
-    <div className="py-10 px-6 md:px-2 overflow-x-hidden">
+    <div className="py-10 px-6 md:px-2 flex justify-center">
       <div className="relative">
         {/* Scrolling container */}
-        <div className="flex">
-          <div className="flex animate-scroll gap-16">
+        <div className="flex max-w-4xl overflow-x-hidden">
+          <div className="flex  animate-scroll gap-16">
             {duplicatedTechStack.map((tech, index) => (
               <div
                 key={`${tech.name}-${index}`}
