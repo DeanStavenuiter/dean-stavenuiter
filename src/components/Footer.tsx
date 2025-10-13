@@ -224,8 +224,7 @@ const Footer = () => {
               </div>
               by
               <Link
-                href="https://deanstavenuiter.nl"
-                target="_blank"
+                href="https://www.deanstavenuiter.nl"
                 className="underline decoration-dotted underline-offset-2"
               >
                 Dean Stavenuiter

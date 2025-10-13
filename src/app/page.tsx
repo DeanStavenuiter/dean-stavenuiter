@@ -12,8 +12,8 @@ export default function Home(): React.JSX.Element {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Dean Stavenuiter",
-    url: "https://deanstavenuiter.nl",
-    image: "https://deanstavenuiter.nl/dean-stavenuiter.webp",
+    url: "https://www.deanstavenuiter.nl",
+    image: "https://www.deanstavenuiter.nl/dean-stavenuiter.webp",
     jobTitle: "Full Stack Developer",
     worksFor: {
       "@type": "Organization",

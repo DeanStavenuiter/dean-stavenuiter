@@ -15,7 +15,7 @@ const splineSansMono = Spline_Sans_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://deanstavenuiter.nl"),
+  metadataBase: new URL("https://www.deanstavenuiter.nl"),
   title: {
     default: "Dean Stavenuiter | Full Stack Developer & OutSystems Expert",
     template: "%s | Dean Stavenuiter",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://deanstavenuiter.nl",
+    url: "https://www.deanstavenuiter.nl",
     title: "Dean Stavenuiter | Full Stack Developer & OutSystems Expert",
     description:
       "Full Stack Developer specializing in Next.js, React, OutSystems, and modern web technologies. Former Michelin-starred chef turned developer.",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://deanstavenuiter.nl",
+    canonical: "https://www.deanstavenuiter.nl",
   },
 };
 
@@ -90,7 +90,7 @@ export default function RootLayout({
     <html lang="en">
       <Analytics />
       <head>
-        <link rel="canonical" href="https://deanstavenuiter.nl" />
+        <link rel="canonical" href="https://www.deanstavenuiter.nl" />
       </head>
       <body
         className={`${sofiaSansCondensed.variable} ${splineSansMono.variable} antialiased background-dots`}

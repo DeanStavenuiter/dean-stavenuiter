@@ -3,5 +3,5 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://deanstavenuiter.nl/sitemap.xml
+Sitemap: https://www.deanstavenuiter.nl/sitemap.xml
 

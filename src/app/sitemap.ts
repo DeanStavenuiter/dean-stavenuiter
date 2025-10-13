@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://deanstavenuiter.nl";
+  const baseUrl = "https://www.deanstavenuiter.nl";
   const trexBaseUrl = "https://trex.deanstavenuiter.nl";
 
   return [
