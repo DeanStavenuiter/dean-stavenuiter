@@ -14,8 +14,73 @@ const splineSansMono = Spline_Sans_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dean Stavenuiter | Full Stack Developer",
-  description: "Dean Stavenuiter",
+  metadataBase: new URL("https://deanstavenuiter.nl"),
+  title: {
+    default: "Dean Stavenuiter | Full Stack Developer & OutSystems Expert",
+    template: "%s | Dean Stavenuiter",
+  },
+  description:
+    "Full Stack Developer specializing in Next.js, React, OutSystems, and modern web technologies. Former Michelin-starred chef turned developer, building enterprise applications and innovative web solutions.",
+  keywords: [
+    "Dean Stavenuiter",
+    "Full Stack Developer",
+    "OutSystems Developer",
+    "Next.js Developer",
+    "React Developer",
+    "Web Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "JavaScript",
+    "TypeScript",
+    "AWS",
+    "Prisma",
+    "MongoDB",
+    "Portfolio",
+  ],
+  authors: [{ name: "Dean Stavenuiter" }],
+  creator: "Dean Stavenuiter",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://deanstavenuiter.nl",
+    title: "Dean Stavenuiter | Full Stack Developer & OutSystems Expert",
+    description:
+      "Full Stack Developer specializing in Next.js, React, OutSystems, and modern web technologies. Former Michelin-starred chef turned developer.",
+    siteName: "Dean Stavenuiter Portfolio",
+    images: [
+      {
+        url: "/dean-stavenuiter.webp",
+        width: 1200,
+        height: 630,
+        alt: "Dean Stavenuiter - Full Stack Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dean Stavenuiter | Full Stack Developer & OutSystems Expert",
+    description:
+      "Full Stack Developer specializing in Next.js, React, OutSystems, and modern web technologies.",
+    images: ["/dean-stavenuiter.webp"],
+    creator: "@deanstavenuiter",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-site-verification-code", // Add your verification code when available
+  },
+  alternates: {
+    canonical: "https://deanstavenuiter.nl",
+  },
 };
 
 export default function RootLayout({
@@ -25,6 +90,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="canonical" href="https://deanstavenuiter.nl" />
+      </head>
       <body
         className={`${sofiaSansCondensed.variable} ${splineSansMono.variable} antialiased background-dots`}
       >

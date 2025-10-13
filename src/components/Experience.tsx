@@ -1333,9 +1333,8 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className="py-20 px-6 md:px-20 overflow-y-hidden ">
-      <section id="experience max-w-4xl">
-        <AnimatedTitle title="Experience" />
+    <section id="experience" className="py-20 px-6 md:px-20 overflow-y-hidden max-w-4xl">
+      <AnimatedTitle title="Experience" />
 
         {/* Experience */}
         <div
@@ -1376,8 +1375,7 @@ const Experience = () => {
             ))}
           </div>
         </div>
-      </section>
-    </div>
+    </section>
   );
 };
 

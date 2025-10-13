@@ -218,7 +218,7 @@ const TechStackCarousel: React.FC = () => {
   const duplicatedTechStack = [...techStack, ...techStack];
 
   return (
-    <div className="py-10 px-6 md:px-2 flex justify-center">
+    <section className="py-10 px-6 md:px-2 flex justify-center" aria-label="Technology Stack">
       <div className="relative">
         {/* Scrolling container */}
         <div className="flex max-w-4xl overflow-x-hidden">
@@ -258,7 +258,7 @@ const TechStackCarousel: React.FC = () => {
           animation-play-state: paused;
         }
       `}</style>
-    </div>
+    </section>
   );
 };
 

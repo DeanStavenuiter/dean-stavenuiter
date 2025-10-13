@@ -57,9 +57,9 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <div id="about" className=" md:py-20 px-6 md:px-20">
+    <section id="about" className=" md:py-20 px-6 md:px-20">
       <AnimatedTitle title="About Me" />
-      <div
+      <article
         ref={textContainerRef}
         className="max-w-4xl mx-auto space-y-6 [&_.split-line]:overflow-visible"
       >
@@ -102,8 +102,8 @@ const AboutMe = () => {
           Outside of coding I enjoy training Brazilian Jiu-Jitsu and going to
           the gym, which help me stay sharp and focused for new challenges.
         </p>
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };
 

@@ -42,16 +42,16 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center mb-20 md:mb-40">
-      <h2 className="font-bold uppercase flex flex-start h1-hero flex-col w-[100%] mt-[150px] ">
+    <section className="flex items-center justify-center mb-20 md:mb-40">
+      <h1 className="font-bold uppercase flex flex-start h1-hero flex-col w-[100%] mt-[150px] ">
         <div className="flex justify-center w-full">
           <span className="text-clip-bg w-full text-clip-bg" ref={span1}>fullstack</span>
         </div>
         <div className="flex justify-center w-full">
           <span className="text-clip-bg w-full text-clip-bg" ref={span2}>developer</span>
         </div>
-      </h2>
-    </div>
+      </h1>
+    </section>
   );
 };
 

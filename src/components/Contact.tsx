@@ -98,7 +98,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="px-6 md:px-20">
+    <section id="contact" className="px-6 md:px-20">
       <AnimatedTitle title="Contact" />
       <div ref={formContainerRef} className="max-w-2xl mx-auto mt-12">
         <p className="text-lg leading-relaxed text-black mb-8 text-center form-element">
@@ -227,7 +227,7 @@ const Contact = () => {
           )}
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

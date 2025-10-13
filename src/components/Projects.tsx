@@ -7,10 +7,10 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <div id="projects" className="py-20 px-6 md:px-20">
+    <section id="projects" className="py-20 px-6 md:px-20">
       <AnimatedTitle title="Projects" />
 
-      <div className="max-w-4xl mx-auto mt-8 md:mt-12">
+      <article className="max-w-4xl mx-auto mt-8 md:mt-12">
         <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 md:p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
           <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
             <Link
@@ -58,8 +58,8 @@ const Projects = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };
 
