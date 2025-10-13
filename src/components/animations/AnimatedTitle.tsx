@@ -48,7 +48,7 @@ const AnimatedTitle = ({ title }: { title: string }) => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto w-full px-4">
+    <div className="max-w-4xl mx-auto w-full">
       <h2
         ref={titleRef}
         className="font-bold uppercase text-center text-black overflow-hidden"
