@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sofia_Sans_Condensed, Spline_Sans_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../../theme/theme-provider";
+import { Analytics } from "@vercel/analytics/next"
 
 const sofiaSansCondensed = Sofia_Sans_Condensed({
   variable: "--font-sofia-sans-condensed",
@@ -75,9 +76,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-site-verification-code", // Add your verification code when available
-  },
   alternates: {
     canonical: "https://deanstavenuiter.nl",
   },
@@ -90,6 +88,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Analytics />
       <head>
         <link rel="canonical" href="https://deanstavenuiter.nl" />
       </head>
