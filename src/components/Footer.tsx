@@ -104,7 +104,7 @@ const Footer = () => {
       className="mt-20 border-t border-gray-300 bg-white py-12 px-6 md:px-20"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand Section */}
           <div className="footer-element">
             <h3 className="text-2xl font-bold text-black mb-4 font-sofia-sans-condensed uppercase tracking-wide">
@@ -166,6 +166,18 @@ const Footer = () => {
                   </a>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Projects */}
+          <div className="footer-element">
+            <h4 className="text-lg font-semibold text-black mb-4 font-sofia-sans-condensed uppercase tracking-wide">Projects</h4>
+            <ul className="space-y-2 font-spline-sans-mono">
+              <li>
+                <a href="https://trex.deanstavenuiter.nl" target="_blank" className="text-base text-gray-700 hover:text-black transition-colors duration-200">
+                  TREX
+                </a>
+              </li>
             </ul>
           </div>
         </div>
