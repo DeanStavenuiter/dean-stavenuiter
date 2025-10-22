@@ -63,14 +63,16 @@ const AboutMe = () => {
         ref={textContainerRef}
         className="max-w-4xl mx-auto space-y-6 [&_.split-line]:overflow-visible"
       >
-        <div className="relative justify-center flex rounded-full">
-          <Image
-            src="/dean-stavenuiter.webp"
-            alt="Dean Stavenuiter"
-            width={150}
-            height={150}
-            className="rounded-full"
-          />
+        <div className="flex justify-center">
+          <div className="relative justify-center flex rounded-full overflow-hidden w-[150px] h-[150px] mt-6 md:mt-0">
+            <Image
+              src="/dean-stavenuiter.webp"
+              alt="Dean Stavenuiter"
+              width={200}
+              height={200}
+              className="absolute rounded-full drop-shadow-lg object-cover scale-140 bottom-[16px] left-[4px]"
+            />
+          </div>
         </div>
         <p className="text-lg leading-relaxed text-black">
           Hi, I&apos;m Dean, a Fullstack & OutSystems Developer with a
