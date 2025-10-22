@@ -74,8 +74,8 @@ export const MobileMenuPopup = () => {
           height: "100vh",
         }}
       >
-        <div className="p-8 pt-8 mt-[125px] text-right">
-          <h2 className="text-2xl font-bold mb-8 text-black ">Menu</h2>
+        <div className="p-8 pt-8 mt-[125px] text-right font-spline-sans-mono">
+          <h2 className="text-2xl font-bold mb-8 text-black font-sofia-sans-condensed">Menu</h2>
 
           <nav className="space-y-6 ">
             <a
@@ -250,7 +250,7 @@ const AnimatedMobileMenu = () => {
       {/* Menu Toggle Button */}
       <button
         onClick={toggleMenu}
-        className="block md:hidden group-hover:font-bold text-[23px]/6 relative overflow-hidden z-[999999]"
+        className="block md:hidden group-hover:font-bold text-[23px]/6 relative overflow-hidden z-[999999] font-spline-sans-mono"
       >
         <span className="inline-block">
           <span ref={leftBracketRef} className="inline-block">
