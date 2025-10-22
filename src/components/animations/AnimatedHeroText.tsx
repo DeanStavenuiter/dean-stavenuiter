@@ -4,13 +4,12 @@ import gsap from "gsap";
 import SplitText from "gsap/SplitText";
 
 const Hero = () => {
-
   const span1 = useRef<HTMLSpanElement>(null);
   const span2 = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     if (!span1.current || !span2.current) return;
-  
+
     const splitSpan1 = new SplitText(span1.current, { type: "chars" });
     const splitSpan2 = new SplitText(span2.current, { type: "chars" });
 
@@ -23,10 +22,10 @@ const Hero = () => {
         each: 0.1,
       },
       onStart: () => {
-        span1.current?.classList.add('gsap-initialized');
-      }
+        span1.current?.classList.add("gsap-initialized");
+      },
     });
-  
+
     gsap.from(splitSpan2.chars, {
       opacity: 0,
       y: -50,
@@ -36,8 +35,8 @@ const Hero = () => {
         each: 0.1,
       },
       onStart: () => {
-        span2.current?.classList.add('gsap-initialized');
-      }
+        span2.current?.classList.add("gsap-initialized");
+      },
     });
   }, []);
 
@@ -45,10 +44,14 @@ const Hero = () => {
     <section className="flex items-center justify-center mb-20 md:mb-40">
       <h1 className="font-bold uppercase flex flex-start h1-hero flex-col w-[100%] mt-[150px] ">
         <div className="flex justify-center w-full">
-          <span className="text-clip-bg w-full text-clip-bg" ref={span1}>fullstack</span>
+          <span className=" w-full " ref={span1}>
+            fullstack
+          </span>
         </div>
         <div className="flex justify-center w-full">
-          <span className="text-clip-bg w-full text-clip-bg" ref={span2}>developer</span>
+          <span className=" w-full " ref={span2}>
+            developer
+          </span>
         </div>
       </h1>
     </section>

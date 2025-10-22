@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Dean Stavenuiter",
   },
   description:
-    "Full Stack Developer specializing in Next.js, React, OutSystems, and modern web technologies. Former Michelin-starred chef turned developer, building enterprise applications and innovative web solutions.",
+    "Full Stack Developer specializing in Next.js, React, OutSystems, and modern web technologies. Building enterprise applications and innovative web solutions.",
   keywords: [
     "Dean Stavenuiter",
     "Full Stack Developer",
