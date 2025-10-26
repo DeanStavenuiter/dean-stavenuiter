@@ -13,6 +13,12 @@ export async function sendContactEmail(
     // Validate the data
     const validatedData = contactFormSchema.parse(data);
 
+    // Honeypot check - if the website field is filled, it's a bot
+    if (validatedData.website) {
+      console.log("Bot detected via honeypot field");
+      return { success: false, error: "Invalid submission detected." };
+    }
+
     // Configure AWS SES client
     const accessKey = process.env.AWS_SES_ACCESS_KEY_ID;
     const secretKey = process.env.AWS_SES_SECRET_ACCESS_KEY;
@@ -26,8 +32,8 @@ export async function sendContactEmail(
     });
 
     // Prepare email content
-    const emailFrom = process.env.EMAIL_FROM || "noreply@deanstavenuiter.nl";
-    const emailTo = process.env.EMAIL_TO || "info@deanstavenuiter.nl";
+    const emailFrom = process.env.EMAIL_FROM;
+    const emailTo = process.env.EMAIL_TO;
 
     const htmlContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

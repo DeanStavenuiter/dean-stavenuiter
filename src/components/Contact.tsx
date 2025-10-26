@@ -199,6 +199,20 @@ const Contact = () => {
             )}
           </div>
 
+          {/* Honeypot Field - Hidden from users, but bots will fill it */}
+          <div className="absolute left-[-9999px] top-[-9999px]" aria-hidden="true">
+            <label htmlFor="website">
+              Website (leave blank)
+            </label>
+            <input
+              id="website"
+              type="text"
+              {...register("website")}
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </div>
+
           {/* Submit Button */}
           <div className="form-element">
             <button
