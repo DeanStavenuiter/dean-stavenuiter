@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Sofia_Sans_Condensed, Spline_Sans_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../../theme/theme-provider";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import { Signature } from "@/components/Signature";
 
 const sofiaSansCondensed = Sofia_Sans_Condensed({
   variable: "--font-sofia-sans-condensed",
@@ -95,6 +96,7 @@ export default function RootLayout({
       <body
         className={`${sofiaSansCondensed.variable} ${splineSansMono.variable} antialiased background-dots`}
       >
+        <Signature />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="max-w-screen">{children}</main>
         </ThemeProvider>

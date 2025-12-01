@@ -50,12 +50,12 @@ export default function Home(): React.JSX.Element {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="relative">
-        <Header />
+        <Header />  
         <Hero />
         <AboutMe />
         <TechStackCarousel />
         <Experience />
-        <Projects />
+        {/* <Projects /> */}
         <Contact />
         <Footer />
       </div>
