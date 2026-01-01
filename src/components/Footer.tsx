@@ -170,7 +170,7 @@ const Footer = () => {
           </div>
 
           {/* Projects */}
-          <div className="footer-element">
+          {/* <div className="footer-element">
             <h4 className="text-lg font-semibold text-black mb-4 font-sofia-sans-condensed uppercase tracking-wide">Projects</h4>
             <ul className="space-y-2 font-spline-sans-mono">
               <li>
@@ -179,7 +179,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Copyright */}
