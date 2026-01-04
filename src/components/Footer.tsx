@@ -139,6 +139,14 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#testimonials"
+                  className="text-base text-gray-700 hover:text-black transition-colors duration-200"
+                >
+                  Reviews
+                </a>
+              </li>
+              <li>
+                <a
                   href="#contact"
                   className="text-base text-gray-700 hover:text-black transition-colors duration-200"
                 >

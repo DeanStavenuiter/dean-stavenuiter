@@ -93,6 +93,13 @@ export const MobileMenuPopup = () => {
               Experience
             </a>
             <a
+              href="#testimonials"
+              className="block text-lg text-gray-700"
+              onClick={toggleMenu}
+            >
+              Reviews
+            </a>
+            <a
               href="#projects"
               className="block text-lg text-gray-700"
               onClick={toggleMenu}

@@ -3,6 +3,7 @@ import Header from "@/components/NewHeader";
 import AboutMe from "@/components/AboutMe";
 import TechStackCarousel from "@/components/TechStackCarousel";
 import Experience from "@/components/Experience";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
@@ -56,6 +57,7 @@ export default function Home(): React.JSX.Element {
         <TechStackCarousel />
         <Experience />
         {/* <Projects /> */}
+        <Testimonials />
         <Contact />
         <Footer />
       </div>
