@@ -29,6 +29,13 @@ const testimonials: Testimonial[] = [
     role: "Owner",
     company: "Denise B Photography",
   },
+  {
+    quote:
+      "I needed a website that clearly communicates what I do. Dean quickly understood my needs and delivered a professional, flexible website. The result is a strong online presence that builds trust, showcases my work, and makes it easier for clients to get in touch. I would definitely recommend working with him.",
+    name: "Gianluca",
+    role: "Creative/Private Chef",
+    company: "Gianluca Vetrugno",
+  },
 ];
 
 const QuoteIcon = ({ className }: { className?: string }) => (
@@ -49,35 +56,59 @@ const QuoteIcon = ({ className }: { className?: string }) => (
 
 const Testimonials = (): React.JSX.Element => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    if (!trackRef.current || !containerRef.current) return;
 
+    const track = trackRef.current;
     const container = containerRef.current;
-    const cards = container.querySelectorAll(".testimonial-card");
-
-    // Set initial state for cards
-    gsap.set(cards, {
-      opacity: 0,
-      y: 40,
+    const cards = Array.from(track.children) as HTMLElement[];
+    
+    // Clone the cards for seamless infinite scroll
+    cards.forEach((card) => {
+      const clone = card.cloneNode(true) as HTMLElement;
+      track.appendChild(clone);
     });
 
-    // Animate cards on scroll
-    gsap.to(cards, {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: "power2.out",
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: container,
-        start: "top 75%",
-        end: "bottom 20%",
-        toggleActions: "play none none reverse",
+    // Calculate total width of original cards
+    const firstCard = cards[0];
+    const cardWidth = firstCard.offsetWidth;
+    const gap = 24; // gap-6
+    const totalWidth = (cardWidth + gap) * cards.length;
+
+    // Set up infinite scroll animation
+    const animation = gsap.to(track, {
+      x: -totalWidth,
+      duration: 43, // Adjust speed here (higher = slower)
+      ease: "none",
+      repeat: -1,
+    });
+
+    // Pause on hover
+    track.addEventListener("mouseenter", () => animation.pause());
+    track.addEventListener("mouseleave", () => animation.resume());
+
+    // Initial fade-in animation
+    const allCards = track.querySelectorAll(".testimonial-card");
+    gsap.set(allCards, { opacity: 0, y: 40 });
+    
+    ScrollTrigger.create({
+      trigger: container,
+      start: "top 75%",
+      onEnter: () => {
+        gsap.to(allCards, {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power2.out",
+        });
       },
     });
 
     return () => {
+      animation.kill();
       ScrollTrigger.getAll().forEach((trigger) => {
         if (trigger.trigger === container) {
           trigger.kill();
@@ -87,34 +118,38 @@ const Testimonials = (): React.JSX.Element => {
   }, []);
 
   return (
-    <section id="testimonials" className="py-12 md:py-20 px-4 md:px-20">
-      <AnimatedTitle title="Reviews" />
-      <div
-        ref={containerRef}
-        className="max-w-5xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-8"
-      >
-        {testimonials.map((testimonial, index) => (
-          <article
-            key={index}
-            className="testimonial-card relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full"
-          >
-            {/* Quote icon */}
-            <div className="absolute -top-4 left-8">
-              <div className="bg-black rounded-full p-2">
-                <QuoteIcon className="w-6 h-6 text-white" />
+    <section id="testimonials" className="py-12 md:py-20 overflow-x-hidden">
+      <div className="px-4 md:px-20">
+        <AnimatedTitle title="Reviews" />
+      </div>
+
+      <div ref={containerRef} className="w-full mt-12 overflow-hidden py-6">
+        {/* Carousel track */}
+        <div
+          ref={trackRef}
+          className="flex gap-6 will-change-transform"
+        >
+          {testimonials.map((testimonial, index) => (
+            <article
+              key={index}
+              className="testimonial-card relative flex-shrink-0 w-[85vw] sm:w-[400px] lg:w-[450px] bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col"
+            >
+              {/* Quote icon in border */}
+              <div className="absolute -top-5 left-8">
+                <div className="bg-black rounded-full p-2.5">
+                  <QuoteIcon className="w-6 h-6 text-white" />
+                </div>
               </div>
-            </div>
 
-            {/* Quote text */}
-            <blockquote className="mt-4 flex-grow">
-              <p className="text-base md:text-lg leading-relaxed text-gray-700 italic">
-                &ldquo;{testimonial.quote}&rdquo;
-              </p>
-            </blockquote>
+              {/* Quote text */}
+              <blockquote className="mt-4 flex-grow">
+                <p className="text-sm md:text-base leading-relaxed text-gray-700 italic">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </p>
+              </blockquote>
 
-            {/* Author info */}
-            <div className="mt-6 pt-6 border-t border-gray-100">
-              <div>
+              {/* Author info */}
+              <div className="mt-6 pt-5 border-t border-gray-100">
                 <p className="font-sofia-sans-condensed font-bold text-black text-lg">
                   {testimonial.name}
                 </p>
@@ -122,13 +157,12 @@ const Testimonials = (): React.JSX.Element => {
                   {testimonial.role}, {testimonial.company}
                 </p>
               </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
 export default Testimonials;
-
