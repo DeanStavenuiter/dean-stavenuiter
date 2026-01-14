@@ -1467,19 +1467,19 @@ const Experience = () => {
 
       {/* Certifications */}
       <div className="mt-16 max-w-4xl mx-auto">
-        <h3 className="text-2xl font-semibold md:mb-6 text-center text-black underline">
+        <h3 className="text-2xl font-semibold mb-6 text-center text-black underline">
           Certifications
         </h3>
-        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div ref={cardsRef} className="grid grid-cols-2 md:gap-6">
           {certificatesData.map((cert, index) => (
             <div
               key={index}
-              className="certificate-card flex flex-row items-center gap-4 p-4 rounded-lg group"
+              className="certificate-card flex flex-row items-center justify-center md:justify-start md:gap-4 p-4 rounded-lg group"
             >
               <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-6">
                 {cert.svg}
               </div>
-              <span className="text-sm text-black font-medium text-left">
+              <span className="text-sm text-black font-medium text-left hidden md:block">
                 {cert.name}
               </span>
             </div>
