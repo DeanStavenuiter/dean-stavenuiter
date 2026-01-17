@@ -36,6 +36,12 @@ const testimonials: Testimonial[] = [
     role: "Creative/Private Chef",
     company: "Gianluca Vetrugno",
   },
+  {
+    quote:"Our website was outdated and needed a major upgrade. Dean helped me with building the new website. After delivery, we had a good-working, beautiful website. The contact was always good and fast, and if something needed to be adjusted, he handled it immediately. Yes, I would definitely recommend him.",
+    name: "Matthias",
+    role: "Owner",
+    company: "Belas VOF",
+  }
 ];
 
 const QuoteIcon = ({ className }: { className?: string }) => (
