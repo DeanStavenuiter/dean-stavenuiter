@@ -1,8 +1,10 @@
+import { getAllAnimationSlugs } from "@/config/animations.config";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.deanstavenuiter.nl";
-  const trexBaseUrl = "https://trex.deanstavenuiter.nl";
+
+  const animationSlugs = getAllAnimationSlugs();
 
   return [
     // Main portfolio site
@@ -12,67 +14,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
+    //  animations
     {
-      url: `${baseUrl}/#about`,
+      url: `${baseUrl}/animations`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#experience`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#projects`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/#contact`,
+    ...animationSlugs.map((slug) => ({
+      url: `${baseUrl}/animations/${slug}`,
       lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.7,
-    },
-    // TREX project pages
-    {
-      url: trexBaseUrl,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${trexBaseUrl}/features`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "monthly" as const,
       priority: 0.8,
-    },
-    {
-      url: `${trexBaseUrl}/faq`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${trexBaseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.6,
-    },
-    {
-      url: `${trexBaseUrl}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.5,
-    },
-    {
-      url: `${trexBaseUrl}/terms`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.5,
-    },
+    })),
   ];
 }
-
