@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import TEXT_01 from "@/components/code-examples/TEXT_01";
+import TEXT_02 from "@/components/code-examples/TEXT_02";
+import TEXT_03 from "@/components/code-examples/TEXT_03";
 
 export interface Animation {
   id: string;
@@ -23,6 +25,7 @@ A powerful text animation using the **SplitText** plugin from GSAP. This animati
 ### Key Features
 - Individual letter animation with smooth transitions
 - Customizable stagger timing for unique effects
+- Stagger from center is used here
 - Smooth easing functions for natural movement
 
 ### Usage Tips
@@ -31,6 +34,50 @@ A powerful text animation using the **SplitText** plugin from GSAP. This animati
 - Experiment with different GSAP easing functions for varied effects`,
     component: <TEXT_01 />,
     componentPath: "src/components/code-examples/TEXT_01.tsx",
+    category: "text",
+  },
+  {
+    id: "text-02",
+    slug: "text-02",
+    title: "TEXT_02",
+    description: `## GSAP SplitText Animation
+
+A powerful text animation using the **SplitText** plugin from GSAP. This animation breaks down text into individual letters and animates them with a staggered effect.
+
+### Key Features
+- Individual letter animation with smooth transitions
+- Customizable stagger timing for unique effects
+- Stagger from end is used here
+- Smooth easing functions for natural movement
+
+### Usage Tips
+- Adjust the \`stagger\` property to control timing: \`stagger: 0.05\`
+- Modify the \`duration\` to speed up or slow down the animation
+- Experiment with different GSAP easing functions for varied effects`,
+    component: <TEXT_02 />,
+    componentPath: "src/components/code-examples/TEXT_02.tsx",
+    category: "text",
+  },
+  {
+    id: "text-03",
+    slug: "text-03",
+    title: "TEXT_03",
+    description: `## GSAP SplitText Animation
+
+A powerful text animation using the **SplitText** plugin from GSAP. This animation breaks down text into individual letters and animates them with a staggered effect.
+
+### Key Features
+- Individual letter animation with smooth transitions
+- Customizable stagger timing for unique effects
+- Stagger from start is used here
+- Smooth easing functions for natural movement
+
+### Usage Tips
+- Adjust the \`stagger\` property to control timing: \`stagger: 0.05\`
+- Modify the \`duration\` to speed up or slow down the animation
+- Experiment with different GSAP easing functions for varied effects`,
+    component: <TEXT_03 />,
+    componentPath: "src/components/code-examples/TEXT_03.tsx",
     category: "text",
   },
 ];
