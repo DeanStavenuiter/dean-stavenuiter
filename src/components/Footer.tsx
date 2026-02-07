@@ -122,36 +122,44 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 font-spline-sans-mono">
               <li>
-                <a
+                <Link
+                  href="/animations"
+                  className="text-base text-gray-700 hover:text-black transition-colors duration-200"
+                >
+                  Animations
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="#about"
                   className="text-base text-gray-700 hover:text-black transition-colors duration-200"
                 >
                   About Me
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#experience"
                   className="text-base text-gray-700 hover:text-black transition-colors duration-200"
                 >
                   Experience
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#testimonials"
                   className="text-base text-gray-700 hover:text-black transition-colors duration-200"
                 >
                   Reviews
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#contact"
                   className="text-base text-gray-700 hover:text-black transition-colors duration-200"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -164,30 +172,18 @@ const Footer = () => {
             <ul className="space-y-2 font-spline-sans-mono">
               {socialLinks.map((link) => (
                 <li key={link.name}>
-                  <a
+                  <Link
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-base text-gray-700 hover:text-black transition-colors duration-200"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Projects */}
-          {/* <div className="footer-element">
-            <h4 className="text-lg font-semibold text-black mb-4 font-sofia-sans-condensed uppercase tracking-wide">Projects</h4>
-            <ul className="space-y-2 font-spline-sans-mono">
-              <li>
-                <a href="https://trex.deanstavenuiter.nl" target="_blank" className="text-base text-gray-700 hover:text-black transition-colors duration-200">
-                  TREX
-                </a>
-              </li>
-            </ul>
-          </div> */}
         </div>
 
         {/* Copyright */}
