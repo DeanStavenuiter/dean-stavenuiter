@@ -67,7 +67,7 @@ export const MobileMenuPopup = () => {
   return (
     <>
       <div
-        className={`fixed bottom-0 left-0 right-0 w-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed bottom-0 left-0 right-0 w-full bg-white z-50 transform transition-transform duration-300 ease-in-out pointer-events-auto ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         style={{
@@ -257,7 +257,7 @@ const AnimatedMobileMenu = () => {
       {/* Menu Toggle Button */}
       <button
         onClick={toggleMenu}
-        className="block md:hidden group-hover:font-bold text-[23px]/6 relative overflow-hidden z-[999999] font-spline-sans-mono"
+        className="block md:hidden group-hover:font-bold text-[23px]/6 relative overflow-hidden z-[999999] font-spline-sans-mono pointer-events-auto"
       >
         <span className="inline-block">
           <span ref={leftBracketRef} className="inline-block">

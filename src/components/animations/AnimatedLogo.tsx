@@ -6,6 +6,7 @@ import { useEffect, useRef, useCallback } from "react";
 import SplitText from "gsap/SplitText";
 
 const Logo = () => {
+
   const logoRef = useRef<HTMLDivElement>(null);
   const span1 = useRef<HTMLSpanElement>(null);
   const span2 = useRef<HTMLSpanElement>(null);
@@ -70,7 +71,7 @@ const Logo = () => {
   }, [init]);
 
   return (
-    <Link href="/" className="">
+    <Link href="/" className="hidden md:block pointer-events-auto">
       <h1 className="flex flex-col pl-4" ref={logoRef}>
         <span
           ref={span1}
